@@ -126,7 +126,7 @@
  *	Creates an operation with the given URL path.
  *  The default headers you specified in your MKNetworkEngine subclass gets added to the headers
  *  The params dictionary in this method gets attached to the URL as query parameters if the HTTP Method is GET/DELETE
- *  The params dictionary is attached to the body if the HTTP Method is POST/PUT
+ *  The params dictionary is attached to the body if the HTTP Method is POST/PUT/PATCH
  *  The HTTP Method is implicitly assumed to be GET
  */
 -(MKNetworkOperation*) operationWithPath:(NSString*) path
@@ -142,7 +142,7 @@
  *  The ssl option when false changes the URL to http.
  *  The default headers you specified in your MKNetworkEngine subclass gets added to the headers
  *  The params dictionary in this method gets attached to the URL as query parameters if the HTTP Method is GET/DELETE
- *  The params dictionary is attached to the body if the HTTP Method is POST/PUT
+ *  The params dictionary is attached to the body if the HTTP Method is POST/PUT/PATCH
  *  The previously mentioned methods operationWithPath: and operationWithPath:params: call this internally
  */
 -(MKNetworkOperation*) operationWithPath:(NSString*) path
@@ -182,7 +182,7 @@
  *  The hostname of the engine is *NOT* prefixed
  *  The default headers you specified in your MKNetworkEngine subclass gets added to the headers
  *  The params dictionary in this method gets attached to the URL as query parameters if the HTTP Method is GET/DELETE
- *  The params dictionary is attached to the body if the HTTP Method is POST/PUT
+ *  The params dictionary is attached to the body if the HTTP Method is POST/PUT/PATCH
  *	This method can be over-ridden by subclasses to tweak the operation creation mechanism.
  *  You would typically over-ride this method to create a subclass of MKNetworkOperation (if you have one). After you create it, you should call [super prepareHeaders:operation] to attach any custom headers from super class.
  *  @seealso

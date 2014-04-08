@@ -664,7 +664,7 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,
     [self.request setHTTPMethod:method];
     
     if (([method isEqualToString:@"POST"] ||
-         [method isEqualToString:@"PUT"]) && (params && [params count] > 0)) {
+         [method isEqualToString:@"PUT"] || [method isEqualToString:@"PATCH"]) && (params && [params count] > 0)) {
       
       self.postDataEncoding = MKNKPostDataEncodingTypeURL;
     }
